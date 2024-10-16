@@ -3,7 +3,7 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: linear-gradient(3deg, rgba(254,240,196,0.680327868852459) 0%, rgba(106,209,252,0.8770491803278688) 100%);
+    background:  rgb(100, 189, 228);
     user-select: none;
 }
 
