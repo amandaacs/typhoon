@@ -1,0 +1,138 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(3deg, rgba(254,240,196,0.680327868852459) 0%, rgba(106,209,252,0.8770491803278688) 100%);
+    user-select: none;
+}
+
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background: rgba(255, 255, 255, 0.001);
+    padding: 40px 60px;
+}
+
+
+
+h2{
+    font-size: 3em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.reset{
+    text-transform: uppercase;
+    padding: 15px 20px;
+    width: 100%;
+    background-color: rgba(255,255,255,0.5);
+    border: none;
+    font-family: 1.5em;
+    letter-spacing: 0.3em;
+    cursor: pointer;
+    font-weight: 500;
+    
+}
+
+.reset:focus{
+    background-color: rgba(196, 195, 195, 0.3);
+    color: #fff;
+    
+}
+
+.game{
+
+    width: 430px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.game-header{
+    display: flex;
+    gap: 12vh;
+    color: #fff;
+    text-align: center;
+}
+
+.item{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 1.5em;
+    transform: rotateY(180deg);
+    transition: 0.25s;
+}
+
+.item::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(232, 223, 188);
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+
+.item.boxOpen{
+    transform: rotateY(0deg);
+}
+
+.boxOpen::after,
+.boxMatch::after{
+    transform: rotateY(180deg);
+}
+
+.rules{
+    background-color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 5px 0;
+}
+
+
+
+.question{
+    width: 300px;
+    height: 150px;
+    background-color: rgba(196, 195, 195, 0.8);
+    position: absolute;
+    margin-bottom: 15vh;
+    border: 5px solid #fff;
+    color: #fff;
+    font-weight: 900;
+    text-align: center;
+    display: none;
+    
+    align-items: start;
+}
+
+.check-btns:focus{
+    background-color: rgba(196, 195, 195, 0.6);
+}
+
+#right, #wrong{
+    background-color:#9dbfd4;
+    border-radius:28px;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    padding: 5px;
+    text-decoration:none;
+    border: none;
+    margin-top: 5vh;
+}
+
